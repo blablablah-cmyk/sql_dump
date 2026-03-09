@@ -51,10 +51,10 @@ DROP TABLE IF EXISTS `car`;
 CREATE TABLE `car` (
   `license_plate` varchar(50) NOT NULL,
   `owner_id` decimal(13,0) NOT NULL,
-  `brand` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `model` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `brand` varchar(30) DEFAULT NULL,
+  `model` varchar(30) DEFAULT NULL,
   `color` varchar(30) NOT NULL,
-  `type` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `type` varchar(30) NOT NULL,
   PRIMARY KEY (`license_plate`),
   KEY `car_relation_1` (`owner_id`),
   CONSTRAINT `car_relation_1` FOREIGN KEY (`owner_id`) REFERENCES `booker` (`citizen_id`)
@@ -196,3 +196,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-03-09 23:41:32
+
