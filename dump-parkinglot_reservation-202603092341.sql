@@ -26,7 +26,7 @@ CREATE TABLE `booker` (
   `citizen_id` decimal(13,0) NOT NULL,
   `name` varchar(30) NOT NULL,
   `surname` varchar(30) NOT NULL,
-  `telephone` decimal(12,0) NOT NULL,
+  `telephone` varchar(11) NOT NULL,
   PRIMARY KEY (`citizen_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +37,7 @@ CREATE TABLE `booker` (
 
 LOCK TABLES `booker` WRITE;
 /*!40000 ALTER TABLE `booker` DISABLE KEYS */;
-INSERT INTO `booker` VALUES (1579800010988,'sompong','jaiyai',898988854),(1579901070888,'somchai','jaidee',980088989),(1579901070889,'somying','jaided',955586432);
+INSERT INTO `booker` VALUES (1579800010988,'sompong','jaiyai',0898988854),(1579901070888,'somchai','jaidee',0980088989),(1579901070889,'somying','jaided',0955586432);
 /*!40000 ALTER TABLE `booker` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,4 +196,5 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-03-09 23:41:32
+
 
